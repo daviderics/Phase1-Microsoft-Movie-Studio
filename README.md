@@ -47,11 +47,21 @@ This demonstrates that Microsoft should be willing to spend big if they want the
 ### Genre
 The highest rated genres of movie on average tended to be movies depicting true events (documentaries, history, biographies), however, these genres were near the bottom in terms of profits.
 The most profitable genres were animation, adventure, sci-fi, and action. Most of the genres are capable of making money, but these genres had an 80% rate of making money. Genres like war, western, and documentary made money less than 54% of the time.
+
+![ProfitVsGenreBoxPlots](Figures/ProfitVsGenreBoxPlots.png)
+
+![ProfitVsGenrePercentages](Figures/ProfitVsGenrePercentages.png)
+
 The safest bet is to make action and/or adventure movies, potentially with sci-fi elements and possibly animated. Can we lure some animators away from Pixar?
 
 ### Casting/Directing
 For both actors and directors, there was a higher probability of making money if those people had been involved in profitable movies in the past. For movies whose cast has starred in 10 or more profitable movies, about 92% made a profit and 79% made over $50 million. If the number of movies the cast has starred in is below 5, then those numbers drop to 65.5% and 32%, respectively.
+
+![ActorStarPower](Figures/ActorStarPower.png)
+
 Hiring a director with no prior successful movies leads to profits only about 68% of the time. However, for movies with directors who have directed 2 or more successful movies, a profit is made over 93% of the time.
+
+![DirectorStarPower](Figures/DirectorStarPower.png)
 
 # Conclusions
 1. Go big. It might seem like paying more will increase the risk, but the data shows that spending big increases the chances of making money in the long run. Further work could be done to look for trends on how the biggest budget movies spent their money. Did they spend most of their money to get the most high-profile actors, to advertise the movie, on special effects, or on building extravagant sets?
@@ -64,3 +74,4 @@ Hiring a director with no prior successful movies leads to profits only about 68
 README.MD      Readme file for reviewers of the project.
 student.ipynb  Jupyter notebook containing the code used to explore, clean, and analyze the data.
 Data           Folder containing the data used for the project, including the cleaned versions of the data.
+Figures        Includes the figures in the presentation.
