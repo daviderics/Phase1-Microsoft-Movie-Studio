@@ -72,6 +72,9 @@ Hiring a director with no prior successful movies leads to profits only about 68
 
 ## Repository Structure
 README.MD      Readme file for reviewers of the project.
+
 student.ipynb  Jupyter notebook containing the code used to explore, clean, and analyze the data.
+
 Data           Folder containing the data used for the project, including the cleaned versions of the data.
+
 Figures        Includes the figures in the presentation.
