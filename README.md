@@ -2,8 +2,7 @@
 
 Microsoft is looking to get into the movie-making business by creating their own studio, but they don't know the first thing about making movies (maybe an exaggeration). They have asked for me to look for trends in the movie industry that will help them be successful.
 
-First, I define success to mean that the movies are profitable and that they are rated positively by critics and viewers. Using movies released since 2010, I looked for trends 
-
+First, I define success to mean that the movies are profitable and that they are rated positively by critics and viewers. Using movies released since 2010, I looked for how profitability and ratings were related to the budget, the genre, and the choice of actors and directors. The data shows that more expensive movies have had more success making money and tend to be rated better. It also shows that animated movies, action/adventure movies, and sci-fi movies have had the highest chance of being profitable for the last 13 years. Finally, my analysis shows that movies featuring actors and directed by directors who have been involved in previous successful movies tend to have a higher probability of making money.
 
 
 # Business Problem
