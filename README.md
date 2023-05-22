@@ -40,6 +40,8 @@ In order to see how the choice of actors and director affects the success of a m
 ### Budget
 Generally, the higher the production budget of a movie, the higher the chance is that the movie made money. The most expensive movies (with production budgets between $90 and $425 million) made a profit 90% of the time and also had the highest profits on average. For movies that cost between $60 and $90 million to produce, the percentage that made money was 78%. The cheapest movies (that cost less than $2 million) only made a profit about 54% of the time.
 
+![BudgetVsProfit](Figures/BudgetVsProfit.png)
+
 This demonstrates that Microsoft should be willing to spend big if they want their movies to be successful financially. It might be tempting to just dip their toes in by making lower budget movies first, but that would make for a higher risk of losing money in the long run. Besides, this is Microsoft. They are a huge company, not the family-owned community theater down the street. They should be looking to make a big splash in the movie industry.
 
 ### Genre
