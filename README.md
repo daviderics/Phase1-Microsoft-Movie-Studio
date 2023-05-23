@@ -71,10 +71,14 @@ Hiring a director with no prior successful movies leads to profits only about 68
 3. Hiring actors and directors that are recognized for their previous work does lead to a higher chance of making a profit. This could be because these people are talented and more capable of making a good movie or it could be because people are more likely to go watch a movie featuring a famous person (probably a bit of both).
 
 ## Repository Structure
-README.MD      Readme file for reviewers of the project.
+README.MD: Readme file for reviewers of the project.
 
-student.ipynb  Jupyter notebook containing the code used to explore, clean, and analyze the data.
+student.ipynb: Jupyter notebook containing the code used to explore, clean, and analyze the data.
 
-Data           Folder containing the data used for the project, including the cleaned versions of the data.
+student.pdf: PDF version of the notebook
 
-Figures        Includes the figures in the presentation.
+presentation.pdf: Google Slides presentation
+
+Data: Folder containing the data used for the project, including the cleaned versions of the data.
+
+Figures: Includes the figures in the presentation.
