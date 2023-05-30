@@ -19,7 +19,7 @@ The IMDb data was useful because I needed information about user ratings, genre,
 
 I joined the two datasets using the movie titles. Within the various tables in the IMDb database, entries can be matched using unique movie IDs, however, TheNumbers.com does not use the same IDs, so I had to use movie titles to combine the datasets so I could have financial and rating information about each. This was the most time-consuming part of the project because I had to manually fix titles so that they would match and so I did not accidentally combine data for different movies with identical titles.
 
-In the end, my final cleaned dataset contains 1784 movies. While it does not contain every major release since 2010, it contains the vast majority of them which is sufficient to look for useful trends.
+In the end, my final cleaned dataset contains 1657 movies. While it does not contain every major release since 2010, it contains the vast majority of them which is sufficient to look for useful trends.
 
 Below is a histogram of the profit for all the movies in the final dataset.
 ![ProfitHistogram](Figures/ProfitHistogram.png)
@@ -36,7 +36,7 @@ In order to see how the choice of actors and director affects the success of a m
 
 # Results
 ### Budget
-Generally, the higher the production budget of a movie, the higher the chance is that the movie made money. The most expensive movies (with production budgets between $90 and $425 million) made a profit 90% of the time and also had the highest profits on average. For movies that cost between $60 and $90 million to produce, the percentage that made money was 78%. The cheapest movies (that cost less than $2 million) only made a profit about 54% of the time.
+Generally, the higher the production budget of a movie, the higher the chance is that the movie made money. The most expensive movies (with production budgets between $125 and $411 million) made a profit 95% of the time and also had the highest profits on average. For movies that cost between $42 and $66.6 million to produce, the percentage that made money was 82%. The cheapest movies (that cost less than $2 million) only made a profit about 53% of the time.
 
 ![BudgetVsProfit](Figures/BudgetVsProfit.png)
 
@@ -44,18 +44,18 @@ This demonstrates that Microsoft should be willing to spend big if they want the
 
 ### Genre
 The highest rated genres of movie on average tended to be movies depicting true events (documentaries, history, biographies), however, these genres were near the bottom in terms of profits.
-The most profitable genres were animation, adventure, sci-fi, and action. Most of the genres are capable of making money, but these genres had an 80% rate of making money. Genres like war, western, and documentary made money less than 54% of the time.
+The most profitable genres were animation, adventure, sci-fi, and action. Most of the genres are capable of making money, but these genres had at least an 80% rate of making money. Genres like war, western, and documentary made money less than 54% of the time.
 
 ![ProfitVsGenrePercentages](Figures/ProfitVsGenrePercentages.png)
 
 The safest bet is to make action and/or adventure movies, potentially with sci-fi elements and possibly animated. Can we lure some animators away from Pixar?
 
 ### Casting/Directing
-For both actors and directors, there was a higher probability of making money if those people had been involved in profitable movies in the past. For movies whose cast has starred in 10 or more profitable movies, about 92% made a profit and 79% made over $50 million. If the number of movies the cast has starred in is below 5, then those numbers drop to 65.5% and 32%, respectively.
+For both actors and directors, there was a higher probability of making money if those people had been involved in profitable movies in the past. For movies whose cast has starred in 10 or more profitable movies, about 85% made a profit and 58% made over $50 million. If the number of movies the cast has starred in is below 5, then those numbers drop to 73% and 33%, respectively.
 
 ![ActorStarPower](Figures/ActorStarPower.png)
 
-Hiring a director with no prior successful movies leads to profits only about 68% of the time. However, for movies with directors who have directed 2 or more successful movies, a profit is made over 93% of the time.
+Hiring a director with no prior successful movies leads to profits only about 73% of the time. However, for movies with directors who have directed 2 or more successful movies, a profit is made over 89% of the time.
 
 ![DirectorStarPower](Figures/DirectorStarPower.png)
 
