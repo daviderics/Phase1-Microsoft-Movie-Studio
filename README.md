@@ -48,8 +48,6 @@ This demonstrates that Microsoft should be willing to spend big if they want the
 The highest rated genres of movie on average tended to be movies depicting true events (documentaries, history, biographies), however, these genres were near the bottom in terms of profits.
 The most profitable genres were animation, adventure, sci-fi, and action. Most of the genres are capable of making money, but these genres had an 80% rate of making money. Genres like war, western, and documentary made money less than 54% of the time.
 
-![ProfitVsGenreBoxPlots](Figures/ProfitVsGenreBoxPlots.png)
-
 ![ProfitVsGenrePercentages](Figures/ProfitVsGenrePercentages.png)
 
 The safest bet is to make action and/or adventure movies, potentially with sci-fi elements and possibly animated. Can we lure some animators away from Pixar?
