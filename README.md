@@ -9,32 +9,30 @@ First, I define success to mean that the movies are profitable and that they are
 Microsoft wants to create a movie studio that will create profitable, well-received movies. My goal was to look for the features of successful movies since 2010 to determine what steps Microsoft should take to give themselves the best opportunity to succeed. Specifically, I looked at the production budget, genres, and casting/directing choices of movies and found what was most likely to produce a profitable and highly-rated movie.
 
 # Data
-I used data from two sources:
-### IMDb (Internet Movie Database)
-IMDb is one of the most popular sources for movie information on the internet.
-The dataset I used contains movies dating back to 2010.
-It includes information about the average viewer rating, runtime, genre, release year, as well as the people who worked on each film (actors, directors, writers, composers, etc.).
+I used data from two sources: IMDb (Internet Movie Database) and TheNumbers.com.
+IMDb: This dataset includes information about the average viewer rating, runtime, genre, release year, as well as the people who worked on each film (actors, directors, writers, composers, etc.).
 The IMDb data was stored as a SQL database containing several tables. I made use of movie_basics, movie_ratings, and persons.
 
-### TheNumbers.com
-TheNumbers.com is a website that compiles data about movies dating all the way back to 1915.
-The dataset I used includes information about the release date, production budget, and domestic/worldwide gross.
+TheNumbers.com: The dataset I used includes information about the release date, production budget, and domestic/worldwide gross.
 
 The IMDb data was useful because I needed information about user ratings, genre, and actors/directors. The data from TheNumbers.com was used primarily for information about the cost and gross revenue of films since profit was one of the primary criteria for success that I used. Profit was calculated to be worldwide gross minus production budget.
 
 I joined the two datasets using the movie titles. Within the various tables in the IMDb database, entries can be matched using unique movie IDs, however, TheNumbers.com does not use the same IDs, so I had to use movie titles to combine the datasets so I could have financial and rating information about each. This was the most time-consuming part of the project because I had to manually fix titles so that they would match and so I did not accidentally combine data for different movies with identical titles.
 
-In the end, my final cleaned dataset contains 1654 movies. While it does not contain every major release since 2010, it contains the vast majority of them which is sufficient to look for useful trends.
+In the end, my final cleaned dataset contains 1784 movies. While it does not contain every major release since 2010, it contains the vast majority of them which is sufficient to look for useful trends.
+
+Below is a histogram of the profit for all the movies in the final dataset.
+![ProfitHistogram](Figures/ProfitHistogram.png)
 
 # Methods
 ### Budget
-For this part, I only used data from TheNumbers.com, which means I was able to use data dating back past 2010. I chose to stop at 1993 to use the last 30 years of movies. I first ignored movies that did not have the budget or gross revenue listed and then calculated the profit by subtracting the production budget from the worldwide gross. I then divided the data into 10 groups with an equal number of movies based on the production budget (to group movies with similar budgets). Within each group, I calculated the percentage of movies that made a profit.
+I divided the data into 10 groups with an equal number of movies based on the production budget (to group movies with similar budgets). Within each group, I calculated the percentage of movies that made a profit.
 
 ### Genre
-After cleaning the movie titles and combining the two datasets, I grouped the movies based on genre. There are 20 different genres listed in the IMDb data and a movie can have multiple genres, so it can be contained in multiple groups. I made boxplots of the profit and average rating within each group to look for trends between the genres. I also calculated the percentage of movies within each group that made money (were profitable) and that made more than $50 million (were very profitable).
+I grouped the movies based on genre. There are 20 different genres listed in the IMDb data and a movie can have multiple genres, so it can be contained in multiple groups. I calculated the percentage of movies within each group that made money (were profitable) and that made more than $50 million (were very profitable).
 
 ### Casting / Directing
-In order to see how the choice of actors and director affects the success of a movie, I created a metric called "Star Power". In the common vernacular, star power refers to how famous someone is. I measured the Star Power of each movie by determining how many movies an actor or director had done PRIOR to that movie. I felt it was important to only include prior movies because this is supposed to be a predictive metric. Also, I only included movies that made at least $100 million because a small budget movie that no one watched is not going to help make someone more famous. Since I only had data dating back to 2010, I could not accurately measure the Star Power of movies released in 2010 or shortly after because I don't have information about movies released prior to that. Instead, I chose to only look at the Star Power of movies released since 2016. I then look at the percentage of movies that were profitable (or very profitable) based on the Star Power. I looked at actor and director Star Power separately.
+In order to see how the choice of actors and director affects the success of a movie, I created a metric called "Star Power". In the common vernacular, star power refers to how famous someone is. I measured the Star Power of each movie by determining how many movies an actor or director had done PRIOR to that movie. I felt it was important to only include prior movies because this is supposed to be a predictive metric. Also, I only included movies that made at least $50 million because a small budget movie that no one watched is not going to help make someone more famous. Since I only had data dating back to 2010, I could not accurately measure the Star Power of movies released in 2010 or shortly after because I don't have information about movies released prior to that. Instead, I chose to only look at the Star Power of movies released since 2016. I then look at the percentage of movies that were profitable (or very profitable) based on the Star Power. I looked at actor and director Star Power separately.
 
 # Results
 ### Budget
@@ -61,7 +59,7 @@ Hiring a director with no prior successful movies leads to profits only about 68
 
 ![DirectorStarPower](Figures/DirectorStarPower.png)
 
-# Conclusions
+# Recommendations
 1. Go big. It might seem like paying more will increase the risk, but the data shows that spending big increases the chances of making money in the long run. Further work could be done to look for trends on how the biggest budget movies spent their money. Did they spend most of their money to get the most high-profile actors, to advertise the movie, on special effects, or on building extravagant sets?
 
 2. The safest types of movies to make right now are animated movies, action/adventure movies, and sci-fi movies. Note that superhero movies fall into the category of sci-fi. Hypothetically, a movie could fit in all of these genres. However, I am not saying that Microsoft has to make an animated, sci-fi, adventure movie. Other genres are capable of making money, but they just haven't had as good of a success rate.
